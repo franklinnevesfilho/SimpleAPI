@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/simpleAPI.iml" filepath="$PROJECT_DIR$/.idea/simpleAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/fastapiExtension.iml" filepath="$PROJECT_DIR$/.idea/fastapiExtension.iml" />
     </modules>
   </component>
 </project>

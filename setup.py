@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="SimpleAPI",
-    version="0.1",
+    name="franklin-fastapi-extension",
+    version="0.2",
     packages=find_packages(),
     install_requires=[
         "fastapi",
