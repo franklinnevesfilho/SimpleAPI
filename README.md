@@ -1,3 +1,24 @@
-# simpleAPI
+# fastapi Extension
 
-This is a package that provides a structured application for building with fastapi.
+#### author: Franklin Neves Filho
+
+## Install
+
+```
+pip install franklin-fastapi-extension
+```
+
+## Usage
+
+```python
+
+@Router
+class MainRoutes:
+  @POST("/")
+  async def function():
+      return {"message": "hello world"}
+
+
+
+
+```
