@@ -16,7 +16,6 @@ setup(
     url="https://github.com/franklinnevesfilho/SimpleAPI",
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: WTFPL License",
         "Operating System :: OS Independent"
     ],
     python_requires=">=3.8"
