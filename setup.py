@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="franklin-fastapi-extension",
-    version="0.2",
+    name="franklin_fastapi_extension",
+    version="0.2.1",
     packages=find_packages(),
     install_requires=[
         "fastapi",
