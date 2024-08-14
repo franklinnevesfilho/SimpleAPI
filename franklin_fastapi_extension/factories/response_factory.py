@@ -1,4 +1,4 @@
-from models.response import Response
+from ..models.response import Response
 from fastapi.responses import JSONResponse
 
 

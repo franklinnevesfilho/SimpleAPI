@@ -1,8 +1,7 @@
-from factories import *
+from .factories import *
 from fastapi import Request
 from fastapi.responses import JSONResponse
-from models.response import Response
-from models.dto import DTO
+from .models import Response, DTO
 
 
 def _handle_errors(result: Response) -> JSONResponse:
