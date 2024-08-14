@@ -5,11 +5,11 @@ def bump_version(version):
     major, minor, patch = map(int, version.split('.'))
     patch += 1
 
-    if patch == 10:
+    if patch >= 10:
         patch = 0
         minor += 1
 
-    if minor == 10:
+    if minor >= 10:
         minor = 0
         major += 1
 
