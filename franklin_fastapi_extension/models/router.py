@@ -53,7 +53,7 @@ def route(path: str, method: str):
     def decorator(func: callable):
         @wraps(func)
         async def wrapper(*args, **kwargs):
-            return func(*args, **kwargs)
+            return await func(*args, **kwargs)
 
         wrapper.route_info = (path, method)
         return wrapper

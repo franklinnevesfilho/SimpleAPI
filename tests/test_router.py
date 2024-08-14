@@ -20,29 +20,42 @@ class MyTestCase(unittest.IsolatedAsyncioTestCase):
     async def test_get_mock_router(self):
         response = await self.client.get("/mock-router/get")
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json(), {"message": "GET method"})
+        self.assertEqual(
+            {
+                "node": {"message": "GET method"},
+                "errors": None
+            },
+            response.json())
 
     async def test_post_mock_router(self):
         response = await self.client.post("/mock-router/post", json={"message": "POST method"})
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json(), {"message": "POST method"})
+        self.assertEqual({"node": {"message": "POST method"}, "errors": None}, response.json())
 
     async def test_put_mock_router(self):
         response = await self.client.put("/mock-router/put", json={"message": "PUT method"})
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json(), {"message": "PUT method"})
+        self.assertEqual({"node": {"message": "PUT method"}, "errors": None}, response.json())
 
     async def test_invalid_post_item(self):
         response = await self.client.post("/mock-router/post", json={"message": 1})
-        self.assertEqual(response.status_code, 422)
-        self.assertEqual(response.json(), {'detail': [{'type': 'string_type', 'loc': ['body', 'message'],
-                                                       'msg': 'Input should be a valid string', 'input': 1}]})
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(
+            {
+                "node": None,
+                "errors":["Invalid type for message: expected str, got int"]
+            },
+            response.json())
 
     async def test_invalid_put_item(self):
         response = await self.client.put("/mock-router/put", json={"message": 1})
-        self.assertEqual(response.status_code, 422)
-        self.assertEqual(response.json(), {'detail': [{'type': 'string_type', 'loc': ['body', 'message'],
-                                                       'msg': 'Input should be a valid string', 'input': 1}]})
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(
+            {
+                "node": None,
+                "errors":["Invalid type for message: expected str, got int"]
+            },
+            response.json())
 
 
 if __name__ == '__main__':

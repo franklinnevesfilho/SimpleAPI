@@ -1,5 +1,5 @@
 from fastapi.responses import JSONResponse
-from ..models.response import Response
+from models import Response
 
 
 _status_codes = {
