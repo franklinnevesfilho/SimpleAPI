@@ -1,11 +1,11 @@
 import unittest
 import httpx
-from franklin_fastapi_extension import FastAPI, register_routes
+from franklin_fastapi_extension import API, register_routes
 from . import routers
 
 
 class MyTestCase(unittest.IsolatedAsyncioTestCase):
-    app = FastAPI()
+    app = API()
     client = None
 
     @classmethod
