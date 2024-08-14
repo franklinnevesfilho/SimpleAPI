@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/fastapiExtension.iml" filepath="$PROJECT_DIR$/.idea/fastapiExtension.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/franklin-fastapi-extension.iml" filepath="$PROJECT_DIR$/.idea/franklin-fastapi-extension.iml" />
     </modules>
   </component>
 </project>
