@@ -3,7 +3,7 @@ from typing import Dict
 
 def Model(cls):
     """
-    A models decorator that allows for the creation of a models class that is also a dictionary.
+    A _models decorator that allows for the creation of a _models class that is also a dictionary.
     :param cls:
     :return: class instance
     """
