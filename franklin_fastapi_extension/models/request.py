@@ -44,7 +44,7 @@ async def get_by_params(function: callable, params: any) -> JSONResponse:
         return bad_request_response()
 
 
-async def call(function: callable, body: Request, dtoClass: DTO) -> JSONResponse:
+async def call(function: callable, body: Request | dict | str | int, dtoClass: DTO = None) -> JSONResponse:
     """
     A helper function to handle requests with request body validation. Must be used with the await keyword.
     :param function: A callable function that takes in the classType as a parameter
@@ -53,12 +53,18 @@ async def call(function: callable, body: Request, dtoClass: DTO) -> JSONResponse
     :return: JSONResponse
     """
 
-    data = await body.json()
-    data = dtoClass(**data)
+    errors = None
+    data = body
 
-    errors = dtoClass.validate(data)
+    if dtoClass:
+        data = await body.json()
+        data = dtoClass(**data)
+
+        errors = dtoClass.validate(data)
+
     if not errors:
         result = function(data)
         return _handle_errors(result)
     else:
         return bad_request_response(Response(errors=errors))
+
