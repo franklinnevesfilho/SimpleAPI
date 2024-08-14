@@ -23,7 +23,7 @@ setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
-        "License :: WTFPL License",
+        "License :: Other/Proprietary License",
     ],
     python_requires=">=3.8"
 )
