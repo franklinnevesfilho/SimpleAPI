@@ -23,14 +23,25 @@ jobs:
         python -m pip install --upgrade pip
         pip install setuptools wheel twine
 
+    - name: Update version number
+      run: python update_version.py
+
     - name: Build the package
       run: python setup.py sdist bdist_wheel
 
     - name: Publish to PyPI
       env:
         TWINE_USERNAME: __token__
-        TWINE_PASSWORD: ${{ secrets.PYPI }}
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
       run: twine upload dist/*
 
     - name: Cleanup dist folder
       run: rm -rf dist/*
+
+    - name: Commit version bump
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add setup.py
+        git commit -m "Bump version number [skip ci]"
+        git push origin main
