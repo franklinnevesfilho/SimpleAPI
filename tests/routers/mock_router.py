@@ -1,4 +1,5 @@
-from franklin_fastapi_extension import GET, POST, PUT, request, Query
+from franklin_fastapi_extension import GET, POST, PUT, Query
+import request
 from .mock_dto import MockDTO, ValidationTest
 from .mock_service import get_all, post_request
 
