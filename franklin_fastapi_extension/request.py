@@ -1,14 +1,8 @@
+from factories import *
 from fastapi import Request
 from fastapi.responses import JSONResponse
-<<<<<<<< HEAD:franklin_fastapi_extension/request.py
-from factories import *
 from models.response import Response
 from models.dto import DTO
-========
-from factories import *
-from models.response import Response
-from models.dto import DTO
->>>>>>>> origin/main:franklin_fastapi_extension/_models/request.py
 
 
 def _handle_errors(result: Response) -> JSONResponse:
