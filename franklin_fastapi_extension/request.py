@@ -57,10 +57,11 @@ async def call(function: callable, body: Request | dict | str | int, dtoClass: D
 
     if dtoClass:
         data = await body.json()
-        data = dtoClass(**data)
-
-        errors = dtoClass.validate(data)
-
+        try:
+            data = dtoClass(**data)
+            errors = dtoClass.validate(data)
+        except TypeError as e:
+            return bad_request_response(Response(errors=[str(e)]))
     if not errors:
         result = function(data)
         return _handle_errors(result)
