@@ -1,6 +1,6 @@
 from fastapi import Request
 from fastapi.responses import JSONResponse
-from factories import *
+from _factories import *
 from .response import Response
 from .dto import DTO
 
