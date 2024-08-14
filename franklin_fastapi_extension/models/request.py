@@ -6,6 +6,11 @@ from .dto import DTO
 
 
 def _handle_errors(result: Response) -> JSONResponse:
+    """
+    A helper function to handle the errors in the Response object
+    :param result: The Response object to handle
+    :return: JSONResponse
+    """
     if result is None:
         return not_found_response()
     elif result.errors:
@@ -18,7 +23,7 @@ async def get_all(supplier: callable) -> JSONResponse:
     """
     A Helper function to handle the get all for the service handling any errors
     :param supplier: The service function to call which returns a Response object
-    :return:
+    :return: JSONResponse
     """
     result = supplier()
 
@@ -26,6 +31,12 @@ async def get_all(supplier: callable) -> JSONResponse:
 
 
 async def get_by_params(function: callable, params: any) -> JSONResponse:
+    """
+    A helper function to handle requests with parameters. Must be used with the await keyword.
+    :param function: A callable function that takes in the parameters as a parameter
+    :param params: The parameters to pass to the function
+    :return: JSONResponse
+    """
     if params:
         result = function(params)
         return _handle_errors(result)
