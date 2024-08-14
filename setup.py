@@ -5,7 +5,7 @@ with open("README.md", "r") as file:
 
 setup(
     name="franklin_fastapi_extension",
-    version='0.0.1',
+    version='0.0.13',
     packages=find_packages(),
     install_requires=[
         "fastapi",
@@ -19,7 +19,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Franklin Neves Filho",
     url="https://github.com/franklinnevesfilho/SimpleAPI",
-    license="Do What The Fuck You Want To Public License",
+    license="WTFPL",
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
