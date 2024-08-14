@@ -1,4 +1,4 @@
-# fastapi Extension
+# Franklin's FastAPI Extension
 
 #### author: Franklin Neves Filho
 
