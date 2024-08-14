@@ -46,4 +46,4 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add setup.py
         git commit -m "Bump version number [skip ci]"
-        git push https://${{ secrets.GH_TOKEN }}@github.com/OWNER/REPOSITORY.git HEAD:main
+        git push https://${{ secrets.GH_TOKEN }}@github.com/franklinnevesfilho/franklin-fastapi-extension.git HEAD:main
