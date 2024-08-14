@@ -5,7 +5,7 @@ with open("README.md", "r") as file:
 
 setup(
     name="franklin_fastapi_extension",
-    version='0.0.14',
+    version='1.0.14',
     packages=find_packages(),
     install_requires=[
         "fastapi",
