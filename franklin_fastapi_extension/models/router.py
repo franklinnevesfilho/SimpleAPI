@@ -62,20 +62,45 @@ def route(path: str, method: str):
 
 
 def GET(path: str = None):
+    """
+    Decorator for GET routes
+    :param path: The route path
+    :return: The wrapped function with route info
+    """
     return route(path, "GET")
 
 
 def PUT(path: str = None):
+    """
+    Decorator for PUT routes
+    :param path: The route path
+    :return: The wrapped function with
+    """
     return route(path, "PUT")
 
 
 def POST(path: str = None):
+    """
+    Decorator for POST routes
+    :param path: The route path
+    :return: The wrapped function with
+    """
     return route(path, "POST")
 
 
 def DELETE(path: str = None):
+    """
+    Decorator for DELETE routes
+    :param path: The route path
+    :return: The wrapped function with
+    """
     return route(path, "DELETE")
 
 
 def PATCH(path: str = None):
+    """
+    Decorator for PATCH routes
+    :param path: The route path
+    :return: The wrapped function with
+    """
     return route(path, "PATCH")

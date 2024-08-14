@@ -5,8 +5,10 @@ from typing import get_type_hints
 def DTO(cls) -> object:
     """
     A DTO decorator allowing for custom validation using regex patterns.
-    :param cls:
-    :return: class instance
+    To use this decorator, create a class with type hints and a VALIDATIONS dictionary.
+    The VALIDATIONS dictionary should contain the field name as the key and a regex pattern as the value using re.compile().
+    :param cls: class to decorate
+    :return: decorated class
     """
 
     cls = dataclass(cls)
