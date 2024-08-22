@@ -18,7 +18,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Franklin Neves Filho",
-    url="https://github.com/franklinnevesfilho/SimpleAPI",
+    url="https://github.com/franklinnevesfilho/franklin-fastapi-extension",
     license="WTFPL",
     classifiers=[
         "Programming Language :: Python :: 3",
