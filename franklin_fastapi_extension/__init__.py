@@ -4,7 +4,7 @@ from .utils import Database, Repository
 
 
 def API(response_class=None, exception_handlers: dict=None, **kwargs):
-    from config import validation_error_handler, JsonResponse, HTTPException_handler
+    from .config import validation_error_handler, JsonResponse, HTTPException_handler
     from fastapi import FastAPI, HTTPException
     from fastapi.exceptions import RequestValidationError
     return FastAPI(
