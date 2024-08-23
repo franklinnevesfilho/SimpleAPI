@@ -2,7 +2,7 @@ import logging
 from typing import Optional, Type, List, TypeVar
 from sqlalchemy.exc import SQLAlchemyError
 from .database_util import Database
-from models import Base
+from ..models import Base
 
 # Set up a logger for the repository
 logger = logging.getLogger(__name__)

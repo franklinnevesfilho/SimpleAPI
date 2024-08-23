@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from config import logger
+from ..config import logger
 
 class Database:
     def __init__(self, db_name, db_user, db_password, db_host, db_port, db_type):

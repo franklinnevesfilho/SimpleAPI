@@ -1,6 +1,6 @@
 from fastapi.exceptions import RequestValidationError
 from starlette.responses import JSONResponse
-from schemas import Response
+from ..schemas import Response
 from fastapi import HTTPException
 
 
