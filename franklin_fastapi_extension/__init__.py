@@ -1,6 +1,6 @@
-from models import Base
-from schemas import Response
-from utils import Database, Repository
+from .models import Base
+from .schemas import Response
+from .utils import Database, Repository
 
 
 def API(response_class=None, exception_handlers: dict=None, **kwargs):
